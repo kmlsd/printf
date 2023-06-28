@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 
 {
 
-int i, printed = 0, printed_chars = 0;
+int i = 0, printed = 0, printed_chars = 0;
 
 int flags, width, precision, size, buff_ind = 0;
 
@@ -22,11 +22,10 @@ if (format == NULL)
 return (-1);
 
 va_start(list, format);
-while (format[i] != '\0)
-
+while (format[i] != '\0')
 {
 
-if (format[i] !=  ' % ' )
+if (format[i] !=  '%' )
 
 {
 
