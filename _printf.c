@@ -21,8 +21,11 @@ if (format == NULL)
 
 return (-1);
 
+
 va_start(list, format);
-while (format[i] != '\0')
+
+for (i = 0; format && format[i] != '\0'; i++)
+
 {
 
 if (format[i] !=  '%' )
